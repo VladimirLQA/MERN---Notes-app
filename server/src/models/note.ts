@@ -9,9 +9,9 @@ const noteSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  category: {
-    type: String,
-    required: true,
+  labels: {
+    type: [String],
+    default: [],
   },
   isPinned: {
     type: Boolean,
