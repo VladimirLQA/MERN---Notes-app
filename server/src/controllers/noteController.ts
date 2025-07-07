@@ -45,9 +45,9 @@ export class NoteController {
 
             if (!note) res.status(404).json({ message: 'Note not found' });
 
-            res.status(200).send({ message: 'Note updated successfully' });
+            res.status(200).send({ message: 'Note updated successfully', note });
         } catch (error) {
-           res.status(500).json({ message: 'Something went wrong' }); 
+           res.status(500).json({ message: 'Something went wrong', error }); 
         }
     }
 
@@ -60,7 +60,7 @@ export class NoteController {
 
             res.status(200).send({ message: 'Note deleted successfully' });
         } catch (error) {
-            res.status(500).json({ message: 'Something went wrong' }); 
+            res.status(500).json({ message: 'Something went wrong', error }); 
         }
     }
 }
