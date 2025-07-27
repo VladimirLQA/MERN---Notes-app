@@ -12,10 +12,12 @@ const noteSchema = new mongoose.Schema({
   labels: {
     type: [String],
     default: [],
+    required: false,
   },
   isPinned: {
     type: Boolean,
     default: false,
+    required: false,
   },
 }, { timestamps: true });
 

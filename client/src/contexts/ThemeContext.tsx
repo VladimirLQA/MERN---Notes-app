@@ -48,7 +48,7 @@ const darkTheme: Theme = {
     buttonPrimary: '#1890ff',
     buttonSecondary: '#404040',
     shadow: '0 2px 8px rgba(0,0,0,0.3)',
-    inputBackground: '#404040',
+    inputBackground: '#4d4d4dff',
     tagBackground: '#404040',
   }
 };

@@ -6,6 +6,7 @@ import HomePage from "./pages/homePage";
 import Header from "./components/header/header";
 import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
 import { useEffect } from "react";
+import TicTacToe from "./pages/TicTacToe/main";
 
 const AppContent = () => {
     const { theme } = useTheme();
@@ -16,6 +17,9 @@ const AppContent = () => {
         document.body.style.transition = 'all 0.3s ease';
         
         document.documentElement.style.backgroundColor = theme.colors.background;
+        
+        // Add theme class to body for CSS targeting
+        document.body.className = `${theme.name}-theme`;
     }, [theme]);
     
     return (
@@ -34,6 +38,7 @@ const AppContent = () => {
                 <Route path="/notes" element={<NoteList />} />
                 <Route path="/notes/create" element={<CreatePage />} />
                 <Route path="/notes/details/:id" element={<NoteDetails />} />
+                <Route path="/ticTacToe" element={<TicTacToe />} />
             </Routes>
         </div>
     );

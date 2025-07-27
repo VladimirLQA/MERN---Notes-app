@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button, Layout, Space, Typography } from 'antd';
-import { HomeOutlined, FileTextOutlined, SunOutlined, MoonOutlined } from '@ant-design/icons';
+import { HomeOutlined, FileTextOutlined, SunOutlined, MoonOutlined, BorderlessTableOutlined } from '@ant-design/icons';
 import { useTheme } from '../../contexts/ThemeContext';
 
 const { Header: AntHeader } = Layout;
@@ -9,6 +9,7 @@ const { Title } = Typography;
 const navItems = [
     { name: 'Home', path: '/', icon: <HomeOutlined /> },
     { name: 'Notes', path: '/notes', icon: <FileTextOutlined /> },
+    { name: 'Tic-tac-toe', path: '/ticTacToe', icon: <BorderlessTableOutlined /> },
 ];
 
 const Header = () => {
@@ -75,6 +76,7 @@ const Header = () => {
                     <Button
                         type="text"
                         size="large"
+                        data-testid="toggle-theme-button"
                         icon={isDark ? <SunOutlined /> : <MoonOutlined />}
                         onClick={toggleTheme}
                         style={{

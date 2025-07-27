@@ -135,6 +135,7 @@ const CreatePage = () => {
 
                     <Form.Item label={<span style={{ color: theme.colors.textPrimary }}>Labels</span>}>
                         <Select
+                            className={`label-select ${theme.name}-theme`}
                             mode="tags"
                             style={{ width: '100%' }}
                             placeholder="Select or type custom labels"

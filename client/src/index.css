@@ -11,23 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.light-theme .ant-input::placeholder,
-.light-theme .ant-input-affix-wrapper input::placeholder {
-  color: #999999 !important;
-  opacity: 1;
-}
-
-.dark-theme .ant-input::placeholder,
-.dark-theme .ant-input-affix-wrapper input::placeholder {
-  color: #888888 !important;
-  opacity: 1;
-}
-
-.light-theme .ant-select-selection-placeholder {
-  color: #999999 !important;
-}
-
-.dark-theme .ant-select-selection-placeholder {
-  color: #888888 !important;
-}
